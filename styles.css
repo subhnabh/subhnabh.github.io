@@ -1,34 +1,31 @@
-body {
+/* Clean & Perfect Navbar Alignment */
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* Logo left, right items right */
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    font-family: 'VT323', monospace;
-    background-color: #000;
-    color: #0f0;
-    line-height: 1.7;
-    font-size: 18px;                   /* Clear, readable base */
-    letter-spacing: 0.8px;
-    transition: background-color 0.4s, color 0.4s;
+    flex-grow: 1;                     /* Takes middle space */
+    justify-content: center;          /* Perfectly centers the links */
 }
 
-header {
-    background: #111;
-    padding: 12px 25px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 0 15px #0f0;
-}
-
-.logo {
-    font-size: 28px;
-    color: #0f0;
-    text-shadow: 0 0 8px #0f0;
+.nav-links li {
+    margin: 0 20px;
 }
 
 .nav-links a {
     font-size: 19px;
     color: #0f0;
+    text-decoration: none;
     transition: all 0.3s;
 }
 
@@ -37,265 +34,64 @@ header {
     text-shadow: 0 0 12px #fff;
 }
 
-.burger div {
-    width: 28px;
-    height: 3px;
-    background-color: #0f0;
-    margin: 6px;
-    box-shadow: 0 0 6px #0f0;
-}
-
-/* Theme Toggle */
-.theme-toggle label {
-    width: 65px;
-    height: 32px;
-    padding: 6px;
-    font-size: 19px;
-    box-shadow: 0 0 12px #0f0;
-}
-
-section {
-    padding: 120px 20px 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-h1 {
-    font-size: 42px;
-    margin: 30px 0;
-    text-shadow: 0 0 12px #0f0;
-}
-
-h2 {
-    font-size: 32px;
-    margin: 30px 0 20px;
-    text-shadow: 0 0 8px #0f0;
-}
-
-h3 {
-    font-size: 26px;
-    margin: 20px 0 15px;
-}
-
-/* Terminal */
-.terminal {
-    border: 2px solid #0f0;
-    width: 85%;
-    max-width: 900px;
-    box-shadow: 0 0 30px #0f0;
-    font-size: 20px;
-}
-
-.terminal-header {
-    padding: 12px;
-    font-size: 18px;
-}
-
-.terminal-body {
-    padding: 35px;
-}
-
-.typing {
-    font-size: 26px;
-    letter-spacing: 1.5px;
-    margin: 25px 0;
-}
-
-/* Images */
-.profile-photo, .section-photo {
-    max-width: 350px;
-    border: 3px solid #0f0;
-    box-shadow: 0 0 25px #0f0;
-    margin: 35px 0;
-}
-
-/* Experience Cards - Clean & Clear */
-.experience-section {
-    padding: 130px 20px 70px;
-}
-
-.section-subtitle {
-    font-size: 22px;
-    margin-bottom: 50px;
-    opacity: 0.9;
-}
-
-.exp-grid {
-    gap: 40px;
-}
-
-.exp-card {
-    padding: 40px;
-    border: 2px solid #0f0;
-    border-radius: 10px;
-    background: #111;
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.3);
-    transition: all 0.4s ease;
-}
-
-.exp-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 0 40px rgba(0, 255, 0, 0.5);
-}
-
-.exp-header h2 {
-    font-size: 28px;
-    margin: 0;
-}
-
-.exp-date {
-    font-size: 20px;
-}
-
-.exp-card h3 {
-    font-size: 24px;
-    margin: 15px 0 25px;
-}
-
-.exp-bullets li {
-    font-size: 19px;
-    padding-left: 32px;
-    margin-bottom: 16px;
-}
-
-.exp-bullets li::before {
-    font-size: 22px;
-    left: 8px;
-}
-
-/* Other Cards */
-.cert-card, .project-card, .blog-post {
-    padding: 35px;
-    font-size: 19px;
-    border: 2px solid #0f0;
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.3);
-}
-
-/* Contact */
-.contact-form input,
-.contact-form textarea {
-    padding: 16px;
-    margin: 15px 0;
-    font-size: 19px;
-}
-
-.contact-form button {
-    padding: 16px 40px;
-    font-size: 20px;
-    box-shadow: 0 0 15px #0f0;
-}
-
-/* Footer */
-footer {
-    padding: 30px;
-    font-size: 18px;
-}
-
-/* Light Mode */
-body.light-mode {
-    background-color: #fff;
-    color: #000;
-}
-
-body.light-mode h1, body.light-mode h2, body.light-mode h3,
-body.light-mode .logo, body.light-mode .nav-links a {
-    color: #0a0;
-    text-shadow: none;
-}
-
-body.light-mode .exp-card,
-body.light-mode .cert-card,
-body.light-mode .project-card,
-body.light-mode .blog-post,
-body.light-mode .terminal {
-    background: #f5f5f5;
-    border-color: #0a0;
-    box-shadow: 0 0 20px rgba(0, 170, 0, 0.3);
-}
-
-body.light-mode .exp-bullets li::before {
-    color: #0a0;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    body { font-size: 17px; }
-    h1 { font-size: 36px; }
-    h2 { font-size: 28px; }
-    .terminal { font-size: 18px; }
-    .typing { font-size: 22px; }
-    .exp-card { padding: 35px; }
-    .exp-bullets li { font-size: 18px; }
-}
-
-body * {
-    transition: all 0.4s ease;
-}
-/* Fix header alignment - center nav links properly */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1400px;           /* Limit width for better centering */
-    margin: 0 auto;              /* Center the entire navbar content */
-    padding: 0 20px;             /* Consistent side padding */
-}
-
-/* Wrap nav links in a container for better control */
-.nav-links-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;     /* This centers the links */
-}
-
-/* On desktop: show links horizontally centered */
-@media (min-width: 769px) {
-    .nav-links {
-        position: static;
-        transform: none;
-        flex-direction: row;
-        background: none;
-        width: auto;
-    }
-
-    .nav-links li {
-        opacity: 1;
-        margin: 0 20px;
-    }
-}
-
-/* Right side: burger + theme toggle */
 .header-right {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* Mobile adjustments - keep existing behavior */
+/* Mobile Menu */
 @media (max-width: 768px) {
-    .nav-links-container {
-        order: 3;
-        flex-grow: 0;
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 70px;                    /* Adjust if your header height is different */
+        background: #111;
+        flex-direction: column;
+        width: 50%;
+        height: calc(100vh - 70px);
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding-top: 40px;
+        box-shadow: -10px 0 20px rgba(0, 255, 0, 0.2);
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .burger {
+        display: block;
     }
 
     .header-right {
         gap: 15px;
     }
+}
 
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 70px;
-        background: #111;
-        flex-direction: column;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        box-shadow: -5px 0 15px rgba(0, 255, 0, 0.3);
+/* Desktop - ensure normal display */
+@media (min-width: 769px) {
+    .burger {
+        display: none;
     }
 
-    .nav-active {
-        transform: translateX(0%);
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        background: none;
+        width: auto;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .nav-links li {
+        opacity: 1;
     }
 }
