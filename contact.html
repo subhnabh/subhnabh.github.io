@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - [Sudhamshu B N]</title>
+    <title>Contact - Sudhamshu B N</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
@@ -34,23 +34,38 @@
             </div>
         </nav>
     </header>
-</body>
 
     <section class="contact-section">
         <h1>Contact</h1>
         <p>Available for professional penetration testing engagements</p>
-        <form class="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" rows="6" required></textarea>
+
+        <!-- Web3Forms Integration -->
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace YOUR_ACCESS_KEY_HERE with your actual key from web3forms.com -->
+            <input type="hidden" name="access_key" value="8353674e-7bbd-482f-a002-c60dd3821072">
+
+            <!-- Optional: Custom subject line -->
+            <input type="hidden" name="subject" value="New Contact Message from Portfolio">
+
+            <!-- Optional: Redirect to a thank you page after submission (create thanks.html if you want) -->
+            <!-- <input type="hidden" name="redirect" value="thanks.html"> -->
+
+            <!-- Honeypot spam protection (hidden checkbox bots might tick) -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" rows="6" required></textarea>
+
             <button type="submit">Send Message</button>
         </form>
+
         <p>Email: sudhamshu.bn@gmail.com</p>
-        <p>LinkedIn: linkedin.com/in/sudhamshu-b-n-760bb7171/</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/sudhamshu-b-n-760bb7171/" target="_blank">linkedin.com/in/sudhamshu-b-n-760bb7171/</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2025 [Sudhamshu B N]. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+        <p>&copy; 2025 Sudhamshu B N. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
     <script src="script.js"></script>
